@@ -24,12 +24,12 @@ body {
 
 ::-moz-selection {
   color: #fff;
-  background: #5372F0;
+  background: cadetblue;
 }
 
 ::selection {
   color: #fff;
-  background: #5372F0;
+  background: cadetblue;
 }
 
 .wrapper {

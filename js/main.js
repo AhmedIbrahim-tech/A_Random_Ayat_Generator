@@ -8,21 +8,21 @@ const quoteText = document.querySelector(".quote"),
 
 //Functions
 
-
 async function randomQuote() {
   quoteBtn.classList.add("loading");
-  quoteBtn.innerText = "Loading...";
-  
-  let numberinsurah = Math.floor(Math.random() * (6348  - 1 + 1)) + 1;
+  quoteBtn.innerText = "جار التحميل...";
+
+  let numberinsurah = Math.floor(Math.random() * (6348 - 1 + 1)) + 1;
+
   const api = "https://api.alquran.cloud/v1/ayah";
   const response = await fetch(`${api}/${numberinsurah}`);
   const data = await response.json();
 
   quoteText.innerText = data.data.text;
-  authorName.innerText = data.data.surah.name || "" ;
+  authorName.innerText = data.data.surah.name || "";
 
   quoteBtn.classList.remove("loading");
-  quoteBtn.innerText = "New Aya";
+  quoteBtn.innerText = "آيَاتِ";
 }
 
 //Event Listeners
