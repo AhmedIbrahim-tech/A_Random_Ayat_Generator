@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./images/Aya.jpg" />
+    <meta name="description" content="مولد آيات عشوائية من القرآن الكريم" />
+    <link rel="icon" href="./images/Aya.jpg" type="image/jpeg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,36 +15,44 @@
     <link rel="stylesheet" href="./css/all.css" />
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> -->
     <title>آيَاتِ</title>
   </head>
 
   <body>
-    <div class="wrapper">
-      <header>آيَاتِ من الذِّكْرِ الْحَكِيمِ</header>
-      <div class="content">
+    <main class="wrapper" role="main">
+      <header role="banner">
+        <h1>آيَاتِ من الذِّكْرِ الْحَكِيمِ</h1>
+      </header>
+      
+      <section class="content" aria-label="الآية">
         <div class="quote-area">
-          <i class="fas fa-quote-left"></i>
-          <p class="quote"></p>
-          <i class="fas fa-quote-right"></i>
+          <i class="fas fa-quote-left" aria-hidden="true"></i>
+          <blockquote class="quote" cite="https://api.alquran.cloud"></blockquote>
+          <i class="fas fa-quote-right" aria-hidden="true"></i>
         </div>
         <div class="author">
-          <span class="name"></span>
-          <span> __ </span>
+          <cite class="name"></cite>
+          <span aria-hidden="true"> __ </span>
         </div>
-      </div>
+      </section>
+
       <div class="buttons">
         <div class="features">
-          <ul>
-            <li class="copy"><i class="fas fa-copy"></i></li>
-            <li class="twitter"><i class="fab fa-twitter"></i></li>
+          <ul role="list">
+            <li class="copy" role="button" tabindex="0" aria-label="نسخ الآية">
+              <i class="fas fa-copy" aria-hidden="true"></i>
+            </li>
+            <li class="twitter" role="button" tabindex="0" aria-label="مشاركة على تويتر">
+              <i class="fab fa-twitter" aria-hidden="true"></i>
+            </li>
+            <li class="facebook" role="button" tabindex="0" aria-label="مشاركة على فيسبوك">
+              <i class="fab fa-facebook-f" aria-hidden="true"></i>
+            </li>
           </ul>
-          <button>آيَاتِ</button>
+          <button type="button" aria-label="جلب آية جديدة">آيَاتِ</button>
         </div>
       </div>
-    </div>
+    </main>
 
     <script src="./js/jquery-3.6.0.min.js"></script>
     <script src="./js/fontawesome.js"></script>
